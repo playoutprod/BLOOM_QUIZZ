@@ -1,0 +1,10 @@
+.choices button{
+  border:1px solid #FFF;
+  border-radius: .5em;
+  padding: 1em;
+  max-width: 20em;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  height:100%;
+}

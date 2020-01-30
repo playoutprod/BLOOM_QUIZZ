@@ -1,0 +1,26 @@
+{
+  "title": "Quizz questions",
+  "content": [
+    {
+      "theme":"Pollution numérique",
+      "entitled": "J’ai beaucoup d’emails non lus, majoritairement des newsletter et des spam.” Vous lui conseillez... :",
+      "choices": [
+           "d’utiliser un bloqueur de mails.",
+           "d'utiliser une application pour qu’il se désabonne et supprime les newsletter en 1 clic."
+      ],
+      "responses" : [
+        "Bravo",
+        "On a mieux !"
+      ],
+      "score":{
+        "choice" : 1,
+        "value" : -10
+      },
+      "startup" : {
+          "title" : "Cleanfox",
+          "description" : "Utilise Cleanfox ! Cette application se connecte à toutes vos boîtes mails, et vous permettra de supprimer tous les mails inutiles et de vous désabonner des newsletters qui ne vous intéresse pas ! En vous débarrassant des mails et newsletters inutiles, vous réduirez votre empreinte carbone et reprendrez le contrôle de votre boite mail.",
+          "image" : "./images/cleanfox.png"
+        }
+    }
+  ]
+}
