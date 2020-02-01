@@ -10,7 +10,7 @@ class Button extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick(){
-    if(this.status.indexOf('disable')==-1){
+    if(this.status.indexOf('disable') === -1){
       if(this.props.clickAction){
         this.props.clickAction(this);
       }
@@ -18,7 +18,7 @@ class Button extends React.Component {
   }
   render(){
     this.status = this.props.status ? this.props.status : 'enable';
-    this.show = this.props.show !== undefined ? (this.props.show ? 'block' : 'none') : 'block';
+    this.show = this.props.show !== undefined ? (this.props.show ? 'inline-block' : 'none') : 'inline-block';
     return(
       <button style={{display:this.show}} onClick={this.handleClick} className={"button "+this.dataClass+" "+this.status}>{this.props.text}</button>
     );

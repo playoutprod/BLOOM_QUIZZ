@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ECLO QUIZZ`,
+    title: `BLOOM QUIZZ`,
     description: `Storytelling here`,
     author: `@esd`,
     credits : `ESD Eco digital`
@@ -16,16 +16,17 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `ESD-BLOOM-QUIZZ`,
+        short_name: `Quizz Bloom`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#000`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        display: `standalone`,
+        icon: `src/images/bloom-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

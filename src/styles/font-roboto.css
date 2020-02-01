@@ -1,23 +1,31 @@
 @font-face {
     font-family: 'Roboto-regular';
-    src: url('./fonts/roboto-v20-latin-regular.woff2') format('woff2'),
-         url('./fonts/roboto-v20-latin-regular.woff') format('woff');
+    src: url('/fonts/roboto-v20-latin-regular.woff2') format('woff2'),
+         url('/fonts/roboto-v20-latin-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'roboto-medium';
     font-weight:500;
-    src: url('./fonts/roboto-v20-latin-500.woff2') format('woff2'),
-         url('./fonts/roboto-v20-latin-500.woff') format('woff');
+    src: url('/fonts/roboto-v20-latin-500.woff2') format('woff2'),
+         url('/fonts/roboto-v20-latin-500.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'roboto-bold';
     font-weight:900;
-    src: url('./fonts/roboto-v20-latin-900.woff2') format('woff2'),
-         url('./fonts/roboto-v20-latin-900.woff') format('woff');
+    src: url('/fonts/roboto-v20-latin-900.woff2') format('woff2'),
+         url('/fonts/roboto-v20-latin-900.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto-bold-italic';
+    font-weight:900;
+    src: url('/fonts/roboto-v20-latin-900italic.woff2') format('woff2'),
+         url('/fonts/roboto-v20-latin-900italic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

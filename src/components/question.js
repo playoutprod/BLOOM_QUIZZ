@@ -1,6 +1,31 @@
 import React from "react"
 import "../styles/questions.css";
 import Button from "./button"
+import {motion} from "framer-motion"
+import {SplitText} from "../components/splitText"
+import icon_right from "../images/icon_right.png";
+import icon_wrong from "../images/icon_wrong.png";
+
+var Sound = require('react-sound').default;
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2
+    }
+  }
+};
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
 
 class Question extends React.Component {
   constructor(props){
@@ -23,7 +48,7 @@ class Question extends React.Component {
       status : 2
     });
     if(this.props.onFinish){
-      this.props.onFinish();
+      this.props.onFinish(1);
     }
     if(this.props.updateScore){
       let result = 0;
@@ -45,11 +70,14 @@ class Question extends React.Component {
     return(result);
   }
   render(){
+    const result = (this.state.pick === this.props.data.score.choice);
     return(
-      <div className="question">
-        <h2>{this.props.data.theme}</h2>
-        <h4>{"Question "+this.props['data-key']+"/"+this.props['data-length']}</h4>
-        <h3>{this.props.data.entitled}</h3>
+      <>
+        {this.state.status <= 1 && (
+          <motion.div>
+        <h1><SplitText>{this.props.data.theme}</SplitText></h1>
+        <h2>{"Question "+(this.props['data-key']+1)+"/"+this.props['data-length']}</h2>
+        <h3><span dangerouslySetInnerHTML={{__html: this.props.data.entitled}}></span></h3>
         <div className="choices row">
           <div className="column c1_2">
             <Button status={(this.state.status === 2 ? 'disable' : '')+' '+this.getPicked(1)} text={this.props.data.choices[0]} clickAction={this.pick} data-key={1}/>
@@ -59,24 +87,33 @@ class Question extends React.Component {
           </div>
         </div>
         <div className="row">
-          <Button show={(this.state.status === 1)} text="Valider" clickAction={this.validate} />
+          <Button dataClass="validate" status={(this.state.status === 1 ? 'enable' : 'disable')} text="Valider" clickAction={this.validate} />
         </div>
-
+      </motion.div>)}
         {this.state.status > 1 && (
-          <div className="result">
-            <div className="answer">{this.props.data.responses[this.state.pick-1]}</div>
-            <div className="startup row">
-              <div className="column c1_3">
-                <img alt={"image "+ this.props.data.startup.title} src={this.props.data.startup.image}/>
-              </div>
-              <div className="column c2_3">
-                <h6>{this.props.data.startup.title}</h6>
-                <p>{this.props.data.startup.description}</p>
-              </div>
+          <motion.div variants={container} initial="hidden" animate="visible" className={"result "+( result ? 'good' : 'bad')}>
+            <motion.div variants={item} className="answer">{this.props.data.responses[this.state.pick-1]}</motion.div>
+            <motion.div variants={item} className="tip">
+            <div className="icon">
+              {result && <div><img alt="icon good" src={icon_right}/><Sound playStatus={Sound.status.PLAYING} url="/vrai.wav"/></div>}
+              {!result && <div><img alt="icon wrong" src={icon_wrong}/><Sound playStatus={Sound.status.PLAYING} url="/Faux.wav"/></div>}
             </div>
-        </div>)}
+            <div className="text">{this.props.data.tip}</div></motion.div>
+            <motion.div variants={item} className="startup">
+              <div className="title row"><div className="column c1_3">Tu connais ?</div></div>
+              <div className="row">
+                <div className="column c1_3">
+                  <img alt={"image "+ this.props.data.startup.title} src={this.props.data.startup.image}/>
+                </div>
+                <div className="column c2_3">
+                  <h6>{this.props.data.startup.title}</h6>
+                  <p>{this.props.data.startup.description}</p>
+                </div>
+              </div>
+            </motion.div>
+        </motion.div>)}
 
-      </div>
+      </>
     );
   }
 }

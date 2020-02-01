@@ -3,24 +3,201 @@
   "content": [
     {
       "theme":"Pollution numérique",
-      "entitled": "J’ai beaucoup d’emails non lus, majoritairement des newsletter et des spam.” Vous lui conseillez... :",
+      "entitled": "“J’ai beaucoup d’emails non lus, majoritairement des newsletters et des spams.”<br/>Tu lui proposes :",
       "choices": [
-           "d’utiliser un bloqueur de mails.",
-           "d'utiliser une application pour qu’il se désabonne et supprime les newsletter en 1 clic."
+           "d’utiliser un anti-spam dédié aux mails",
+           "d’utiliser une application pour se désabonner et supprimer les newsletters en un clic"
       ],
       "responses" : [
-        "Bravo",
-        "On a mieux !"
+        "Dommage",
+        "Bravo"
+      ],
+      "score":{
+        "choice" : 2,
+        "value" : -20
+      },
+      "tip":"Supprimer 30 mails équivaut à économiser 24h de consommation d’une ampoule.",
+      "startup" : {
+          "title" : "Utilise Cleanfox !",
+          "description" : "Cette application se connecte à toutes tes boîtes mail, elle permet de supprimer tous les mails inutiles et de te désabonner des newsletters qui ne t’intéressent pas ! En te débarrassant des mails et newsletters inutiles, tu réduiras ton empreinte carbone et reprendra le contrôle de tes boîtes mail.",
+          "image" : "./images/Question1_Cleanfox.jpg"
+        }
+    },
+    {
+      "theme":"Éducation",
+      "entitled": "“Je sais que mes habitudes numériques consomment beaucoup d’électricité, mais je ne sais pas par où commencer pour réduire cet impact.” <br/>Tu lui proposes : ",
+      "choices": [
+           "de demander des solutions au service client de son fournisseur d’électricité. ",
+           "une intelligence artificielle qui adaptera sa consommation à son usage du digital."
+      ],
+      "responses" : [
+        "Presque !",
+        "Exactement"
+      ],
+      "score":{
+        "choice" : 2,
+        "value" : -10
+      },
+      "tip":"72% des français assurent avoir modifié leurs comportements dans le sens de l’écologie en 2018",
+      "startup" : {
+          "title" : "Plana est là !",
+          "description" : "À l’image de Siri ou de Google Assistant, Plana remplit les missions classiques que l’on confie à un assistant vocal. En plus de cela, l’application analyse l’usage que fait un internaute de son smartphone pour l’en informer et va ensuite trouver des solutions pour réduire la pollution que cela engendre.",
+          "image" : "./images/Question2_Plana.png"
+        }
+    },
+    {
+      "theme":"Relation au vivant",
+      "entitled": "“Je n’arrive pas à donner de mon temps ou mon argent pour des projets engagés pour l’homme et la planète...” <br/>Tu lui proposes :",
+      "choices": [
+           "d’utiliser des plateformes de dons pour envoyer de l’argent automatiquement tous les mois !",
+           "d’utiliser un moteur de recherche engagé ! "
+      ],
+      "responses" : [
+        "Il y a mieux",
+        "Bien vu !"
+      ],
+      "score":{
+        "choice" : 2,
+        "value" : -30
+      },
+      "tip":"Sans même y penser, vous pouvez transformer vos recherches internet en engagement pour la planète.",
+      "startup" : {
+          "title" : "Lilo",
+          "description" : "Lilo est un moteur de recherche tout ce qui a de plus classique dans son utilisation. Sauf qu’une partie de son chiffre d’affaires est reversée à des projets sociaux et environnementaux !",
+          "image" : "./images/Question3_Lilo.png"
+      }
+    },
+    {
+      "theme":"Éducation",
+      "entitled": "“J’essaie de montrer à mon fils les plaisirs du jardinage, mais sa tablette et sa console concentrent toute son attention.” <br/>Il est possible de :",
+      "choices": [
+           "s’abonner à des chaînes Youtube portées sur le jardinage.",
+           "utiliser des plantes connectées pour lier digital et jardinage."
+      ],
+      "responses" : [
+        "Dommage",
+        "Évidemment"
+      ],
+      "score":{
+        "choice" : 2,
+        "value" : -10
+      },
+      "tip":"C’est prouvé ! Le jardinage réduit le stress, augmente la confiance en soi, et permet de manger plus sainement !",
+      "startup" : {
+          "title" : "Botaki pour vos petits !",
+          "description" : "Cette startup permet aux enfants de découvrir les plaisirs du jardinage grâce à ses totems connectés aux plantes et son application pour apprendre tout en s’amusant.",
+          "image" : "./images/Question4_Botaki.png"
+      }
+    },
+    {
+      "theme":"Eaux et océan",
+      "entitled": "“Je sais que les matières plastiques de mes produits finissent par polluer l’environnement, notamment les océans. Je ne sais pas quoi acheter pour réduire cela.” Quelle est la solution la plus adaptée ?",
+      "choices": [
+           "J’achète des boissons dans des contenants plastiques plus petits.",
+           "Je consomme des produits issus de fibres de plastique recyclées."
+      ],
+      "responses" : [
+        "C'est une idée",
+        "Bonne idée !"
+      ],
+      "score":{
+        "choice" : 2,
+        "value" : -30
+      },
+      "tip":"Chaque minute, l’équivalent d’un camion poubelle est déversé dans l’océan mais des solutions de dépollution des océans existent.",
+      "startup" : {
+          "title" : "Corail",
+          "description" : "Corail est une start-up qui produit des chaussures à partir de matières plastiques directement recueillies en mer.",
+          "image" : "./images/Question5_Corail.png"
+      }
+    },
+    {
+      "theme":"Alimentaire",
+      "entitled": "“Je me fais livrer mon dîner, mais je n’avais pas si faim... Qu’est-ce que je fais des restes de mon repas ?” <br/>Tu lui proposes :",
+      "choices": [
+           "d’utiliser les emballages réutilisables en cire d’abeille.",
+           "d’éviter au maximum de se faire livrer pour éviter le suremballage."
+      ],
+      "responses" : [
+        "Bravo !",
+        "Oui, mais non"
       ],
       "score":{
         "choice" : 1,
-        "value" : -10
+        "value" : -20
       },
+      "tip":"Les matériaux synthétiques ont un impact négatif sur les écosystèmes et sur la santé humaine.",
       "startup" : {
-          "title" : "Cleanfox",
-          "description" : "Utilise Cleanfox ! Cette application se connecte à toutes vos boîtes mails, et vous permettra de supprimer tous les mails inutiles et de vous désabonner des newsletters qui ne vous intéresse pas ! En vous débarrassant des mails et newsletters inutiles, vous réduirez votre empreinte carbone et reprendrez le contrôle de votre boite mail.",
-          "image" : "./images/cleanfox.png"
-        }
+          "title" : "Utilisez Bee Wrap",
+          "description" : "Pour vos récipients ou directement sur vos aliments (légumes, fruits, pains, fromages). Pour cela, exercez simplement des petites pressions avec vos mains (2 à 3 secondes) sur la surface à emballer. La chaleur de vos petits doigts experts va mouler naturellement le Bee Wrap. Le film lavable trouvera également sa place au frais.",
+          "image" : "./images/Question6_Anotherway.png"
+      }
+    },
+    {
+      "theme":"Fast fashion",
+      "entitled": "“J’ai besoin de nouveaux vêtements, mais je suis inquiet de l’impact environnemental des produits qui me plaisent.” <br/>Tu lui proposes :",
+      "choices": [
+           "de se diriger vers un site qui regroupe toutes les marques responsables.",
+           "de se diriger vers des grandes marques qui font des vêtements de qualité."
+      ],
+      "responses" : [
+        "Bravo !",
+        "Oui, mais non"
+      ],
+      "score":{
+        "choice" : 1,
+        "value" : -30
+      },
+      "tip":"L’industrie du textile est le deuxième secteur le plus polluant.",
+      "startup" : {
+          "title" : "Choisis WeDressFair !",
+          "description" : "Découvre des marques de mode éthique, qui placent le respect des travailleurs et de l’environnement au centre de leurs préoccupations. Trouve des vêtements éthiques en matières biologiques, naturelles ou recyclées, fabriqués en France, en Europe, ou dans des usines certifiées.",
+          "image" : "./images/Question7_Wedressfair.png"
+      }
+    },
+    {
+      "theme":"Transport",
+      "entitled": "“Je dois parfois faire des déplacements professionnels, mais j’aimerais ne pas m’encombrer d’un véhicule de fonction polluant que je n’utilise pas la moitié de l’année.” <br/>Tu lui conseilles :",
+      "choices": [
+           "de prendre les transports en commun.",
+           "d’utiliser des moyens de transport à partager entre salariés d’une même entreprise."
+      ],
+      "responses" : [
+        "Le vent tourne",
+        "Pile poil !"
+      ],
+      "score":{
+        "choice" : 2,
+        "value" : -30
+      },
+      "tip":"Pour un trajet quotidien de 2 kilomètres, la voiture non-électrique est le mode de transport le plus polluant.",
+      "startup" : {
+          "title" : "Déplace-toi avec Flexy Moov !",
+          "description" : "Flexy Moov propose une gamme de véhicules électriques (vélos, voitures, trottinettes et scooters) à partager entre salariés au sein de ton entreprise, le but étant de réduire l’empreinte carbone.",
+          "image" : "./images/Question8_FlexyMove.png"
+      }
+    },
+    {
+      "theme":"Air",
+      "entitled": "“La pollution atmosphérique est une problématique majeure dans les milieux urbains.” <br/>Comment régler ce problème ?",
+      "choices": [
+          "Remplacer les grandes gares par des parcs naturels.",
+          "Mettre en place des structures absorbantes de pollution en attendant l’évolution des moyens de transports et de climatisation."
+      ],
+      "responses" : [
+        "Presque",
+        "OUI !"
+      ],
+      "score":{
+        "choice" : 2,
+        "value" : -15
+      },
+      "tip":"La pollution atmosphérique fait figure d’ennemi n°1 de la santé des citadins.",
+      "startup" : {
+          "title" : "Le banc CityTree.",
+          "description" : "L’entreprise allemande Greencity Solutions propose depuis 2014 son CityTree. Un banc surmonté d’un mur végétal qui absorbe l’équivalent de 275 arbres grâce à sa mousse végétale ultra-performante. C’est une solution qui permet de lutter rapidement et efficacement contre le rejet de CO2 dans l’atmosphère",
+          "image" : "./images/Question9_Citytree.png"
+      }
     }
   ]
 }

@@ -1,0 +1,17 @@
+#intro .text{
+  font-size: 1.3em;
+  font-family: 'roboto-bold';
+}
+#intro .text *{
+  line-height: 1.2em;
+}
+.intro{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
+.intro #logo{
+  width:30em;
+}

@@ -1,0 +1,16 @@
+#start.screen .content{
+  padding-bottom: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#start.screen .content .intro{
+  height:auto;
+}
+#start.screen button.next {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}

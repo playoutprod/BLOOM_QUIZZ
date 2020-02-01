@@ -1,15 +1,24 @@
 button{
   -moz-appearance: none;
   -webkit-appearance: none;
-  border:1px solid #FFF;
+  border:0;
   padding: 1em;
-  background: transparent;
+  background: rgba(18, 224, 155, 1);
   color:#FFF;
-  border-radius: 1em;
+  border-radius: 3em;
   min-width: 10em;
+  font-family: 'roboto-bold'!important;
+  font-size: 1.5em;
 }
 button.disable,button.notpicked{
   opacity: .2;
+  background-color: rgba(0,0,0,0);
+  border:1px solid #FFF;
+}
+button.validate{
+  margin-top:2em;
+  font-size:1.2em;
+  padding: .5em 2em;
 }
 button.disable.notpicked{
   opacity:0;
@@ -19,6 +28,7 @@ button.disable.picked{
 }
 button.picked{
   border-color:#CDFAB5;
+  background-color: #111c19;
 }
 #start button{
   margin:1em auto;

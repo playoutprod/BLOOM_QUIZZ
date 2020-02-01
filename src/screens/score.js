@@ -10,12 +10,12 @@ class ScorePage extends React.Component {
   }
   render(){
     return(<>
-      <h2>
+      <h1>
       <SplitText>
-      Ici un écran de<br/><b>SCORE</b>
+      Grâce à<br/><b> vos efforts</b>
       </SplitText>
-      </h2>
-      <p>Vous aurez atteind votre objectif en l'an <b>{this.props.score}</b> ce qui n'est pas terrible</p>
+      </h1>
+      <h2>La planète pourrait atteindre une empreinte carbone neutre en <b>{this.props.score}</b></h2>
       </>);
   }
 }

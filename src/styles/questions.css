@@ -1,10 +1,114 @@
+.question h1{
+  font-size: 1.5em;
+}
+.question h2{
+  font-size: 1em;
+  border-bottom: 1px solid #747474;
+  display: inline-block;
+  padding-bottom: .5em;
+  color:#747474;
+}
+.question h3{
+  line-height: 1.5em;
+}
 .choices button{
   border:1px solid #FFF;
   border-radius: .5em;
-  padding: 1em;
-  max-width: 20em;
+  padding: 2em;
   display:flex;
   justify-content:center;
   align-items: center;
   height:100%;
+  font-family: 'roboto-regular';
+  font-size: 1.2em;
+  width:100%;
+  background-color: #000;
+}
+.choices .column:first-child{
+  padding-right: 2%;
+}
+.choices .column:last-child{
+  padding-left: 2%;
+}
+.question .answer{
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'roboto-bold';
+}
+.question .good .answer{
+  color:#12e09b;
+}
+.question .result{
+  width:100%;
+  margin-top: -10em;
+}
+.question .tip{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  width:70%;
+  position: relative;
+  left:15%;
+  margin:1em 0;
+}
+.question .tip>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.question .tip .icon{
+  flex:1;
+}
+.question .tip .icon img{
+  margin:0;
+  max-width: 4em;
+  height:auto;
+}
+.question .tip .text{
+  flex:6;
+  padding: 2%;
+  font-family: 'Roboto-Regular';
+  font-size: 1.1em;
+}
+.question .button.next{
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  margin-top:2em;
+  font-size:1.2em;
+  padding: .5em 2em;
+  position:absolute;
+}
+.question .startup{
+  position: absolute;
+  bottom:2em;
+  padding: 2em 2em 1em 2em;
+  border:1px solid #FFF;
+  border-radius:2em;
+}
+.question .startup .title{
+  font-size: 2em;
+  color:rgba(0,0,0,0);
+  -webkit-text-stroke: 1px #FFF;
+  margin-bottom: 1em;
+  justify-content: flex-start;
+}
+.question .column.c1_3 img{
+  width:150px;
+  height:150px;
+  border-radius: 2em;
+  overflow: hidden;
+}
+.question .column.c2_3{
+  align-items: flex-start;
+}
+.question .startup h6{
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+.question .startup p{
+  line-height:1.3em;
+  text-align: left;
 }
