@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 import line from "../images/line.svg";
 
-class Background extends React.Component {
+export default class Background extends React.Component {
   componentDidMount(){
     this.randomizeRefs("start");
     const component = this;
@@ -60,4 +60,3 @@ class Background extends React.Component {
     </div>)
   }
 }
-export default Background;

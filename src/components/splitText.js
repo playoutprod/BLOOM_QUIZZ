@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from "framer-motion"
 
 
-export class SplitText extends React.Component {
+export default class SplitText extends React.Component {
   constructor(props){
     super(props);
     const animation = props.animation ? props.animation : "spring";
@@ -57,7 +57,6 @@ export class SplitText extends React.Component {
     }
     const p_class = this.props.className ? this.props.className : "";
     return(
-
       <motion.p
         width={ "100%" }
         background={ "" }

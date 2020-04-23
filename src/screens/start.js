@@ -1,10 +1,11 @@
-import React from "react"
-import {SplitText} from "../components/splitText"
-import { motion } from "framer-motion"
+import React from "react";
+import PropTypes from "prop-types";
+import SplitText from "../components/splitText";
+import { motion } from "framer-motion";
 
 import "../styles/start.css";
 
-class StartPage extends React.Component {
+export default class StartPage extends React.Component {
   constructor(props){
     super(props);
     if(props.onFinish){
@@ -19,8 +20,9 @@ class StartPage extends React.Component {
           <SplitText delay={.5}>TIME MACHINE</SplitText>
         </motion.h1>
       </div>
-    );
+    )
   }
 }
-
-export default StartPage
+StartPage.propTypes ={
+  onFinish:PropTypes.func
+}

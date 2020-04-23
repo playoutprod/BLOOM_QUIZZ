@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from "prop-types";
+import React from "react";
 
-import "../styles/button.css"
+import "../styles/button.css";
 
-class Button extends React.Component {
+export default class Button extends React.Component {
   constructor(props){
     super(props);
     this.dataClass = this.props.dataClass ? this.props.dataClass : '';
@@ -32,4 +32,3 @@ Button.defaultProps = {
   text: "Suivant",
   link : ""
 }
-export default Button

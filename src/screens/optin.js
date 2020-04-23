@@ -1,10 +1,11 @@
 import React from "react"
-import {SplitText} from "../components/splitText"
+import PropTypes from "prop-types"
+import SplitText from "../components/splitText"
 import FormDataComponent from "../components/form"
 
 import "../styles/optin.css";
 
-class OptinPage extends React.Component {
+export default class OptinPage extends React.Component {
   constructor(props){
     super(props);
     this.finish = this.finish.bind(this);
@@ -36,7 +37,7 @@ class OptinPage extends React.Component {
         </h1>
         <p>Afin de repartir avec un petit souvenir, laissez nous votre email.</p>
         {<FormDataComponent score={this.props.score} onFinish={this.finish} db={this.props.db}/>}
-        <div role="button" tabIndex={0} className="pass" onClick={this.forceNext}>Passer cette étape</div>
+        <div role="button" tabIndex={0} className="pass" onClick={this.forceNext} onKeyDown={this.forceNext}>Passer cette étape</div>
       </div>)}
       {this.state.finish && (<div className="thanks">
         <h1>
@@ -48,5 +49,8 @@ class OptinPage extends React.Component {
       </>);
   }
 }
-
-export default OptinPage
+OptinPage.propTypes = {
+  onNext:PropTypes.func,
+  score:PropTypes.number,
+  db:PropTypes.object
+}

@@ -1,10 +1,11 @@
 import React from "react"
+import PropTypes from 'prop-types';
 import Button from "./button"
 import {motion} from "framer-motion"
 
 import "../styles/screen.css";
 
-export class Screen extends React.Component {
+export default class Screen extends React.Component {
   constructor(props){
     super(props);
     this.getNext = this.getNext.bind(this);
@@ -70,3 +71,9 @@ export class Screen extends React.Component {
     );
   };
 }
+Screen.propTypes = {
+  onNext: PropTypes.func,
+  updateScore : PropTypes.func,
+  id: PropTypes.string,
+  button : PropTypes.string
+};

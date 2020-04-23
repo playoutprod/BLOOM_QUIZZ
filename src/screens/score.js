@@ -1,7 +1,8 @@
 import React from "react"
-import {SplitText} from "../components/splitText"
+import PropTypes from "prop-types"
+import SplitText from "../components/splitText"
 
-class ScorePage extends React.Component {
+export default class ScorePage extends React.Component {
   constructor(props){
     super(props);
     if(props.onFinish){
@@ -19,5 +20,6 @@ class ScorePage extends React.Component {
       </>);
   }
 }
-
-export default ScorePage
+ScorePage.propTypes = {
+  onFinish: PropTypes.func
+}

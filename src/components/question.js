@@ -1,8 +1,9 @@
 import React from "react"
+import PropTypes from 'prop-types';
 import "../styles/questions.css";
 import Button from "./button"
 import {motion} from "framer-motion"
-import {SplitText} from "../components/splitText"
+import SplitText from "../components/splitText"
 import icon_right from "../images/icon_right.png";
 import icon_wrong from "../images/icon_wrong.png";
 
@@ -27,7 +28,7 @@ const item = {
   }
 };
 
-class Question extends React.Component {
+export default class Question extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -112,9 +113,13 @@ class Question extends React.Component {
               </div>
             </motion.div>
         </motion.div>)}
-
       </>
     );
   }
 }
-export default Question
+Question.propTypes = {
+  "data-length": PropTypes.number,
+  updateScore : PropTypes.func,
+  "data-key": PropTypes.string,
+  data: PropTypes.object
+};

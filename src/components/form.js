@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from "prop-types"
 
 export default class FormDataComponent extends React.Component {
   constructor(props) {
@@ -59,7 +59,6 @@ export default class FormDataComponent extends React.Component {
       });
       return(false);
     }
-    let cases = true
     if(!this.state.rgpd_1 || !this.state.rgpd_2 || !this.state.rgpd_3){
       this.setState({
         status:"notice",
@@ -145,12 +144,10 @@ export default class FormDataComponent extends React.Component {
     let target = e.target;
     const name = target.name;
     if(this.state[name] === true){
-      this.state[name] = false;
       this.setState({
         [name]: false
       });
     }else{
-      this.state[name] = true;
       this.setState({
         [name]: true
       });
@@ -196,4 +193,9 @@ export default class FormDataComponent extends React.Component {
         </div>)
     }
   }
+}
+FormDataComponent.propTypes = {
+  score :PropTypes.string,
+  onFinish:PropTypes.func,
+  db:PropTypes.object
 }

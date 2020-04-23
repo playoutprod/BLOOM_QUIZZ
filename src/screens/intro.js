@@ -1,9 +1,10 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { motion } from "framer-motion"
 
 import "../styles/intro.css";
 
-class IntroPage extends React.Component {
+export default class IntroPage extends React.Component {
   constructor(props){
     super(props);
     if(props.onFinish){
@@ -19,5 +20,6 @@ class IntroPage extends React.Component {
     </div>);
   }
 }
-
-export default IntroPage
+IntroPage.propTypes = {
+  onFinish: PropTypes.func
+}

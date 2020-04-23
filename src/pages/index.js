@@ -1,10 +1,10 @@
-import React from "react"
-import questions_data from "../data/questions.json"
+import React from "react";
+import questions_data from "../data/questions.json";
 import Config from '../config/app';
 import Question from "../components/question";
-import Layout from "../components/layout"
-import {Screen} from "../components/screen"
-import Background from "../components/background"
+import Layout from "../components/layout";
+import Screen from "../components/screen";
+import Background from "../components/background";
 import StartPage from "../screens/start";
 import IntroPage from "../screens/intro";
 import OptinPage from "../screens/optin";
@@ -15,10 +15,10 @@ import "../styles/main.css";
 import "../styles/font-prototype.css";
 import "../styles/font-roboto.css";
 
-class IndexPage extends React.Component {
+export default class IndexPage extends React.Component {
   constructor(props){
     super(props)
-    this.getNext = this.getNext.bind(this)
+    this.getNext = this.getNext.bind(this);
     this.getPrev = this.getPrev.bind(this);
     this.updateScore = this.updateScore.bind(this);
     this.initScoreValue = 2300;
@@ -28,6 +28,7 @@ class IndexPage extends React.Component {
     }
     this.db=null;
   }
+
   getNext(){
     let value = this.state.currentScreen+1;
     if(this.state.currentScreen === questions_data.content.length+3){
@@ -86,4 +87,3 @@ class IndexPage extends React.Component {
     );
   }
 }
-export default IndexPage
